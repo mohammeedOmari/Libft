@@ -6,7 +6,7 @@
 /*   By: momari <momari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 22:26:57 by momari            #+#    #+#             */
-/*   Updated: 2023/11/04 17:09:02 by momari           ###   ########.fr       */
+/*   Updated: 2023/11/13 23:15:44 by momari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,26 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int main () {
-   char str1[15];
-   char str2[15];
-   int ret, ret2;
-
-   memcpy(str1, "abcd7f", 6);
-   memcpy(str2, "aBcdef", 6);
-
-	ret = ft_memcmp(str1, str2, 5);
-   	ret2 = memcmp(str1, str2, 5);
-
-
-	  printf("%d\n%d", ret, ret2);
-
-
-   return(0);
-}
-
-*/

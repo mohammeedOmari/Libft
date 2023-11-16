@@ -6,9 +6,11 @@
 /*   By: momari <momari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 10:22:27 by momari            #+#    #+#             */
-/*   Updated: 2023/11/04 21:12:38 by momari           ###   ########.fr       */
+/*   Updated: 2023/11/15 10:12:26 by momari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -29,14 +31,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)(s + index));
 	return (0);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-
-	char str[] = "afffbcdffffffffef";
-	printf("%s\n", ft_strrchr(str, 'f'));
-	
-}
-*/

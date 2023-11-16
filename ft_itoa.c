@@ -6,13 +6,13 @@
 /*   By: momari <momari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 02:43:52 by momari            #+#    #+#             */
-/*   Updated: 2023/11/10 19:00:01 by momari           ###   ########.fr       */
+/*   Updated: 2023/11/13 22:50:40 by momari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_num(long a)
+static int	count_num(long a)
 {
 	int	i;
 
@@ -30,7 +30,7 @@ int	count_num(long a)
 	return (i);
 }
 
-char	*ft_cpynum(char *dst, long n, int len)
+static char	*ft_cpynum(char *dst, long n, int len)
 {
 	dst[len] = '\0';
 	len--;
@@ -57,14 +57,7 @@ char	*ft_itoa(int n)
 
 	i = (long)n;
 	if (n == 0)
-	{
-		ptr = (char *)malloc(2);
-		if (ptr == NULL)
-			return (NULL);
-		ptr[0] = '0';
-		ptr[1] = '\0';
-		return (ptr);
-	}
+		return (ft_strdup("0"));
 	len = count_num((long)n);
 	ptr = (char *)malloc(len + 1);
 	if (ptr == NULL)
@@ -72,11 +65,3 @@ char	*ft_itoa(int n)
 	ft_cpynum(ptr, i, len);
 	return (ptr);
 }
-
-/* #include <stdio.h>
-
-int main(int ac, char **av)
-{
-	// printf("%d\n", ft_atoi(NULL));
-	printf("%d\n", atoi(NULL));
-} */

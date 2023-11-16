@@ -6,7 +6,7 @@
 /*   By: momari <momari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 22:26:16 by momari            #+#    #+#             */
-/*   Updated: 2023/11/10 03:11:10 by momari           ###   ########.fr       */
+/*   Updated: 2023/11/14 02:21:52 by momari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	d_len = 0;
 	if (!dst && !dstsize)
-		return (0);
+		return (ft_strlen(src));
 	while (dst[d_len] && d_len < dstsize)
 		d_len++;
 	s_len = ft_strlen(src);
@@ -40,16 +40,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	return (d_len + s_len);
 }
-/* #include <stdio.h>
-#include <string.h>
-int main()
-{
-	char dst[] = "ismail12";
-	char src[] = "lorem ipsum dolor sit amet";
-	char dst2[] = "ismail12";
-	char src2[] = "lorem ipsum dolor sit amet";
-	size_t res = ft_strlcat(dst, src, 0);
-	size_t res2 = strlcat(dst2, src2, 0);
-	printf("%zu\n%s\n", res, dst);
-	printf("\n%zu\n%s\n", res2, dst2);
-} */

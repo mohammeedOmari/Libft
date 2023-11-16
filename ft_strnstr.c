@@ -6,7 +6,7 @@
 /*   By: momari <momari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 14:02:34 by momari            #+#    #+#             */
-/*   Updated: 2023/11/04 17:50:44 by momari           ###   ########.fr       */
+/*   Updated: 2023/11/14 10:06:58 by momari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	j;
 
 	i = 0;
+	if (!haystack && !len)
+		return (NULL);
 	if (!needle[i])
 		return ((char *)haystack);
 	while (i < len && haystack[i])
@@ -36,15 +38,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int main()
-{
-		char *s1 = "AAAAAAAAAAAAA";
-		size_t max = strlen(s1);
-		char *i1 = strnstr(s1, s1, max);
-		char *i2 = ft_strnstr(s1, s1, max);
-		printf("%s\n%s\n",i1, i2);
-}
-*/

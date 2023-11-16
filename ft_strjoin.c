@@ -6,13 +6,13 @@
 /*   By: momari <momari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 22:14:59 by momari            #+#    #+#             */
-/*   Updated: 2023/11/05 04:07:45 by momari           ###   ########.fr       */
+/*   Updated: 2023/11/15 10:13:29 by momari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, char const *src, size_t len)
+static char	*ft_strcpy(char *dst, char const *src, size_t len)
 {
 	size_t	i;
 

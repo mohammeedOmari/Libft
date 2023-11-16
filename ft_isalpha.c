@@ -6,21 +6,15 @@
 /*   By: momari <momari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 13:56:09 by momari            #+#    #+#             */
-/*   Updated: 2023/11/04 13:56:24 by momari           ###   ########.fr       */
+/*   Updated: 2023/11/14 21:56:31 by momari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (c);
+		return (1);
 	return (0);
 }
-/*
-#include <stdio.h>
-int main()
-{
-	int res = ft_isalpha('.');
-	printf("%d", res);
-}
-*/

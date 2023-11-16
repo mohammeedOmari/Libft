@@ -6,7 +6,7 @@
 /*   By: momari <momari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 08:25:55 by momari            #+#    #+#             */
-/*   Updated: 2023/11/10 02:41:07 by momari           ###   ########.fr       */
+/*   Updated: 2023/11/11 22:32:58 by momari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*current;
 
+	if (lst == NULL || new == NULL)
+		return ;
 	if (*lst == NULL)
 	{
 		*lst = new;

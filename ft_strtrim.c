@@ -6,13 +6,13 @@
 /*   By: momari <momari@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 23:45:39 by momari            #+#    #+#             */
-/*   Updated: 2023/11/10 20:57:31 by momari           ###   ########.fr       */
+/*   Updated: 2023/11/14 02:59:26 by momari           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strsearsh(char const *s1, const char b)
+static int	ft_strsearsh(char const *s1, const char b)
 {
 	int	i;
 
@@ -33,7 +33,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*ptr;
 
 	i = 0;
-	if (!s1)
+	if (!s1 || !set)
 		return (NULL);
 	while (s1[i] && ft_strsearsh(set, s1[i]) == 0)
 		i++;
@@ -49,10 +49,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(ptr, s1 + i, s1_len - i + 1);
 	return (ptr);
 }
-
-/* int main()
-{
-	char s1[] = "          ";
-	char *res = ft_strtrim(s1, " ");
-	printf("%s",res);
-}  */
